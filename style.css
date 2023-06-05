@@ -1,3 +1,26 @@
-body {
-  background-color: blueviolet;
+.fundo {
+  /* 
+  background-image: url(./assets/bg-mobile-dark.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; 
+  */
+
+  /* background: color image repeat position/size */
+  background: url(./assets/bg-mobile-dark.jpg) no-repeat top center/cover;
+}
+
+#container {
+  width: 360px;
+  height: 712px;
+  border: 1px solid red;
+  margin: auto;
+}
+
+#profile img {
+  scale: 45%;
+}
+
+#profile a {
+  
 }
