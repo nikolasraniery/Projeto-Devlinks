@@ -1,26 +1,29 @@
 .fundo {
-  /* 
-  background-image: url(./assets/bg-mobile-dark.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover; 
-  */
-
   /* background: color image repeat position/size */
   background: url(./assets/bg-mobile-dark.jpg) no-repeat top center/cover;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  color: white;
 }
 
 #container {
   width: 360px;
   height: 712px;
-  border: 1px solid red;
+  border: 1px solid whitesmoke;
+  border-radius: 2%;
   margin: auto;
 }
 
+#profile {
+  text-align: center;
+}
+
 #profile img {
-  scale: 45%;
+  width: 112px;
 }
 
 #profile a {
-  
+  margin: auto;
 }
