@@ -44,12 +44,22 @@ body * {
 
 ul {
   list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-ul li {
+ul li a {
   display: flex;
-  border: 1px solid whitesmoke;
-  justify-content: center;
   align-items: center;
-  height: 90px;
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+
+  backdrop-filter: blur(4px);
 }
