@@ -54,6 +54,7 @@ ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
 
   padding: 16px 24px;
 
@@ -62,4 +63,17 @@ ul li a {
   border-radius: 10px;
 
   backdrop-filter: blur(4px);
+}
+
+#footer {
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  justify-content: center;
+  gap: 20px;
+}
+
+#credits p {
+  display: flex;
+  justify-content: center;
 }
