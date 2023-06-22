@@ -55,14 +55,21 @@ ul li a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  font-weight: 500;
 
   padding: 16px 24px;
 
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-
   backdrop-filter: blur(4px);
+
+  transition: background 0.9s;
+}
+
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid white;
 }
 
 #footer {
@@ -71,6 +78,19 @@ ul li a {
   padding: 50px;
   justify-content: center;
   gap: 20px;
+  transition: background 0.9s;
+}
+
+.bi-instagram:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.bi-linkedin:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.bi-github:hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 #credits p {
