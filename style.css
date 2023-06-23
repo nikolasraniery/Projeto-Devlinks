@@ -4,14 +4,72 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile-dark.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color : rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0, 0, 0, 0.05);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(0, 0, 0, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+}
+
 body {
   /* background: color image repeat position/size */
-  background: url(./assets/bg-mobile-dark.jpg) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: white;
+  color: var(--text-color);
+}
+
+/* switch */
+
+#switch {
+  position: relative;
+  width: 64px;
+  margin-top: 50px;
+  margin-left: 1150px;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  left: 0;
+  right: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
 
 #container {
@@ -59,8 +117,8 @@ ul li a {
 
   padding: 16px 24px;
 
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
   border-radius: 10px;
   backdrop-filter: blur(4px);
 
@@ -68,29 +126,31 @@ ul li a {
 }
 
 ul li a:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid white;
+  background: var(--surface-color-hover);
+  border: 1px solid var(--text-color);
 }
 
 #footer {
   display: flex;
-  align-items: center;
-  padding: 50px;
   justify-content: center;
-  gap: 20px;
-  transition: background 0.9s;
+  
+  padding: 24px 0;
+
+  font-size: 24px;
 }
 
-.bi-instagram:hover {
-  background: rgba(255, 255, 255, 0.05);
+#footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+
+  transition: background .2s;
+  border-radius: 30%;
 }
 
-.bi-linkedin:hover {
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.bi-github:hover {
-  background: rgba(255, 255, 255, 0.05);
+#footer a:hover {
+  background: var(--highlight-color);
 }
 
 #credits p {

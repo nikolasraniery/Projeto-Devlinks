@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" class="">
   <head>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,16 +20,11 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body class="fundo">
+    <div id="switch" onclick="toggleMode()">
+        <button></button>
+        <span></span>
+    </div>
     <div id="container">
-      <div class="form-check form-switch form-check-reverse">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          id="flexSwitchCheckReverse"
-        />
-        <label class="form-check-label" for="flexSwitchCheckReverse"></label>
-      </div>
-
       <div id="profile">
         <img src="./assets/avatar.png" alt="Foto de Perfil" />
         <p>@nikolasraniery</p>
@@ -122,5 +117,7 @@
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+    
+    <script src="./script.js"></script>
   </body>
 </html>
